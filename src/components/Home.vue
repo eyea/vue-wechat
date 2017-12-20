@@ -8,7 +8,7 @@
 <script>
   export default {
     name: 'Home',
-    data() {
+    data () {
       return {
         title: 'welcome wechat',
         copyright: 'wonderful experience will come soon '
