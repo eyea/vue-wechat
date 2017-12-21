@@ -38,7 +38,7 @@
         showIconClose: false,
         title: '微信测试版',
         showIconSearch: true,
-        showIconAddLists: true     
+        showIconAddLists: true
       }
     }
   }
