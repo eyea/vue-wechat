@@ -58,6 +58,6 @@
   height: 100vh;
 }
 .main {
-  padding-top: 80px;
+  /* padding-top: 80px; */
 }
 </style>
