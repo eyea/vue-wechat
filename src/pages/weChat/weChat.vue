@@ -3,7 +3,7 @@
     <div class='main'>
       <div class='lists' v-for='(item, index) in lists' :key='index' @click="openChat">
         <div class='showAvator'>
-          <img class='avator' src={item.imgUrl} alt=''>
+          <img class='avator' v-bind:src='item.imgUrl' alt=''>
           <span class='infoNum'>{{item.infoCount}}</span>
         </div>
         <div class='showSubmits'>
@@ -25,12 +25,12 @@ export default {
   data () {
     return {
       lists: [{
-        imgUrl: 'http://img.xiaopiu.com/images/defaultImg-727ca6ead8.png',
+        imgUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
         infoCount: 9,
         title: '联系人名称',
         submitInfo: '摘要信息'
       }, {
-        imgUrl: 'http://img.xiaopiu.com/images/defaultImg-727ca6ead8.png',
+        imgUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
         infoCount: 10,
         title: '联系人名称',
         submitInfo: '摘要信息'
@@ -67,8 +67,8 @@ export default {
 .showAvator img.avator {
   display: inline-block;
   width: 98px;
-  height: 98px; 
-  border: 1px solid red;
+  height: 98px;
+  border-radius: 50%;
 	background-color: rgba(235, 235, 235, .1);  
 }
 .showAvator .infoNum {

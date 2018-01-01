@@ -7,7 +7,7 @@
     <!-- 根据不同规则来显示 -->
     <div class='lists' v-for='(item, index) in lists' :key='index' @click='handleDiscover'>
         <div class='showPic'>
-            <img class='avator' src={item.discoverImgUrl} alt=''>
+            <img class='avator' v-bind:src='item.discoverImgUrl' alt=''>
         </div>
         <div class='showInfo'>
             <h3 class='title'>
@@ -15,7 +15,7 @@
 						</h3>
         </div>
         <div class='showAvator' v-show='item.tips'>
-          <img class='avator' src={item.tips.tipsImgUrl} alt=''>
+          <img class='avator' v-bind:src='item.tips ? item.tips.tipsImgUrl : ""' alt=''>
           <span class='infoNum'>{{item.infoCount}}</span>
         </div>
     </div>
@@ -31,30 +31,30 @@ export default {
       },
       lists: [
         {
-          discoverImgUrl: 'http://img.xiaopiu.com/images/defaultImg-727ca6ead8.png',
+          discoverImgUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
           title: 'Wallet',
           tips: {
-            tipsImgUrl: 'http://img.xiaopiu.com/images/defaultImg-727ca6ead8.png'
+            tipsImgUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4'
           }
         },
         {
-          discoverImgUrl: 'http://img.xiaopiu.com/images/defaultImg-727ca6ead8.png',
+          discoverImgUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
           title: 'Favorites'
         },
         {
-          discoverImgUrl: 'http://img.xiaopiu.com/images/defaultImg-727ca6ead8.png',
+          discoverImgUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
           title: 'My Posts'
         },
         {
-          discoverImgUrl: 'http://img.xiaopiu.com/images/defaultImg-727ca6ead8.png',
+          discoverImgUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
           title: 'Cards & Offers'
         },
         {
-          discoverImgUrl: 'http://img.xiaopiu.com/images/defaultImg-727ca6ead8.png',
+          discoverImgUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
           title: 'Stick Gallery'
         },
         {
-          discoverImgUrl: 'http://img.xiaopiu.com/images/defaultImg-727ca6ead8.png',
+          discoverImgUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
           title: 'Settings'
         }
       ]
@@ -94,7 +94,7 @@ export default {
   display: inline-block;
   width: 76px;
   height: 76px;
-  border: 1px solid red;
+  border-radius: 50%;
   background-color: rgba(235, 235, 235, 0.1);
 }
 .showInfo {
@@ -119,8 +119,8 @@ export default {
 .showAvator img.avator {
   display: inline-block;
   width: 76px;
-  height: 76px; 
-  border: 1px solid red;
+  height: 76px;
+  border-radius: 50%;
 	background-color: rgba(235, 235, 235, .1);  
 }
 .showAvator .infoNum {

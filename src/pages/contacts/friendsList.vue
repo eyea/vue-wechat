@@ -7,7 +7,7 @@
     <!-- 分类展示 -->
     <div class='lists' v-for='(item, index) in lists' :key='index' @click='contactSb'>
         <div class='showPic'>
-            <img class='avator' src={item.contactImgUrl} alt=''>
+            <img class='avator' v-bind:src='item.contactImgUrl' alt=''>
         </div>
         <div class='showInfo'>
             <h3 class='title'>
@@ -26,19 +26,19 @@ export default {
     return {
       lists: [
         {
-          contactImgUrl: 'http://img.xiaopiu.com/images/defaultImg-727ca6ead8.png',
+          contactImgUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
           title: 'New Friends'
         },
         {
-          contactImgUrl: 'http://img.xiaopiu.com/images/defaultImg-727ca6ead8.png',
+          contactImgUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
           title: 'Group Chat'
         },
         {
-          contactImgUrl: 'http://img.xiaopiu.com/images/defaultImg-727ca6ead8.png',
+          contactImgUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
           title: 'Tags'
         },
         {
-          contactImgUrl: 'http://img.xiaopiu.com/images/defaultImg-727ca6ead8.png',
+          contactImgUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
           title: 'Official Accounts'
         }
       ]
@@ -73,7 +73,7 @@ export default {
   display: inline-block;
   width: 76px;
   height: 76px;
-  border: 1px solid red;
+  border-radius: 50%;
   background-color: rgba(235, 235, 235, 0.1);
 }
 .showInfo {
