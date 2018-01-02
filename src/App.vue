@@ -1,19 +1,25 @@
 <template>
   <div id='app'>
 
-    <Header></Header>
-
     <div class="main">
+      <Header v-if='isMain'></Header>
+
       <WeChat v-if='progress === "WeChat"'></WeChat>
 
       <FriendsList v-if='progress === "FriendsList"'></FriendsList>
 
       <Discover v-if='progress === "Discover"'></Discover>
 
-      <Me v-if='progress === "Me"'></Me>      
+      <Me v-if='progress === "Me"'></Me>
+      
+      <Footer v-if='isMain'></Footer>
     </div>
 
-    <Footer></Footer>
+    <!-- 个性化界面 -->
+        <!-- 聊天界面 -->
+    <P2PDialog v-if='progress === "P2PDialog"'></P2PDialog>    
+
+    
   </div>
 </template>
 
@@ -24,12 +30,14 @@
   import FriendsList from './pages/contacts/friendsList.vue'
   import Discover from './pages/discover/discover.vue'
   import Me from './pages/me/me.vue'
+  import P2PDialog from './pages/weChat/P2PDialog.vue'
   import { mapState } from 'vuex'
 
   export default {
     name: 'app',
     computed: mapState({
-      progress: state => state.progress
+      progress: state => state.progress,
+      isMain: state => state.isMain
     }),
     components: {
       Header,
@@ -37,7 +45,8 @@
       WeChat,
       FriendsList,
       Discover,
-      Me
+      Me,
+      P2PDialog
     }
   }
 </script>

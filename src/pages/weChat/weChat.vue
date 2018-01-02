@@ -1,7 +1,7 @@
 <template>
   <div class='wechatContainer'>
     <div class='main'>
-      <div class='lists' v-for='(item, index) in lists' :key='index' @click="openChat">
+      <div class='lists' v-for='(item, index) in lists' :key='index' @click="openChat(item)">
         <div class='showAvator'>
           <img class='avator' v-bind:src='item.imgUrl' alt=''>
           <span class='infoNum'>{{item.infoCount}}</span>
@@ -28,18 +28,26 @@ export default {
         imgUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
         infoCount: 9,
         title: '联系人名称',
-        submitInfo: '摘要信息'
+        submitInfo: '摘要信息',
+        chatType: 'p2p'// 聊天分类 个人、群聊、公众号
       }, {
         imgUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
         infoCount: 10,
         title: '联系人名称',
-        submitInfo: '摘要信息'
+        submitInfo: '摘要信息',
+        chatType: 'groupChat'
       }]
     }
   },
   methods: {
-    openChat: function () {
-      alert('o')
+    openChat: function (item) {
+      // 从聊天列表点击进入聊天界面
+      console.log(item)
+      // 根据Item的某个字段来进入不同的路由
+      if (item.chatType === 'p2p') {
+        this.$store.commit('updateIsMain', false)
+        this.$store.commit('updateProgress', 'P2PDialog')
+      }
     }
   }
 }
