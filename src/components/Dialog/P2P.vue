@@ -32,18 +32,18 @@ export default {
           avatorUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4'
         }
       }, {
-          time: '1514904883000',
-          sendMessage: {
-            type: 'text',
-            content: '好啊~'
-          },
-          isCurrentPeoson: 1,
-          sendMessagePersonInfos: {
-            name: 'dong',
-            uid: 520,
-            avatorUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4'
-          }
-        }]
+        time: '1514904883000',
+        sendMessage: {
+          type: 'text',
+          content: '好啊~'
+        },
+        isCurrentPeoson: 1,
+        sendMessagePersonInfos: {
+          name: 'dong',
+          uid: 520,
+          avatorUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4'
+        }
+      }]
     }
   }
 }
