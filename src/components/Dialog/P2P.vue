@@ -4,7 +4,7 @@
     <div class="showTime">{{new Date()}}</div>
 
     <div class='chatBox' v-for='(item, index) in latestInfos' :key='index'>
-      <div :class='item.isCurrentPeoson === 1 ? "fr" : "fl"'>
+      <div :class='item.isCurrentPeoson === 1 ? "fr" : "fl"' class="boxContainer">
         <img :class='item.isCurrentPeoson === 1 ? "fr" : "fl"' class='avator' v-bind:src='item.sendMessagePersonInfos.avatorUrl' alt="">
         <p :class='item.isCurrentPeoson === 1 ? "fr" : "fl"' class='content'>
           {{ item.sendMessage.content}}
@@ -65,6 +65,10 @@ export default {
   .chatBox {
     width: 100%;
     height: 50px;
+  }
+  .boxContainer {
+    margin-left: 10px;
+    margin-right: 10px;
   }
   .avator {
     display: inline-block;
