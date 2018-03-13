@@ -9,3 +9,7 @@
 2. 在本项目 `yarn build`， 将 `dist`的文件 `copy` 到 `coding` 下的 `WeChat`
 
 3. 因为之前在`coding`上已经进行了`pages`的配置，将打包后的文件替换上去后，页面自动刷新，当前项目的预览地址是 [wechat](https://eyea.coding.me/wechat/)
+
+### some others
+按照设计稿是 `640 * n`
+适配方案:采用rem单位,安装`px2rem-loader`,在`build/utils.js`下添加 `cssLoader: px2remLoader`,并配置。具体可参本项目的文件。

@@ -56,8 +56,6 @@
   padding: 0;
   margin: 0;
   height: 100vh;
-}
-.main {
-  padding-top: 80px;
+  overflow-x: hidden;
 }
 </style>
