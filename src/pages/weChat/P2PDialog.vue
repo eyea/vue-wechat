@@ -75,5 +75,3 @@ export default {
     white-space: nowrap;
   }
 </style>
-
-

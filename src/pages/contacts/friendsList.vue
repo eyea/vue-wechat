@@ -55,7 +55,7 @@ export default {
 <style scoped>
 
 .contactsContainer {
-	font-size: 24px;
+  font-size: 24px;
 }
 .lists {
   height: 80px;
@@ -87,4 +87,5 @@ export default {
   height: 80px;
   line-height: 80px;
 }
+
 </style>

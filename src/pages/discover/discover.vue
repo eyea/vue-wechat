@@ -7,8 +7,8 @@
         </div>
         <div class='showInfo'>
             <h3 class='title'>
-							{{item.title}}
-						</h3>
+              {{item.title}}
+            </h3>
         </div>
         <div class='showAvator' v-show='item.tips'>
           <img class='avator' v-bind:src='item.tips ? item.tips.tipsImgUrl : ""' alt=''>
@@ -67,7 +67,7 @@ export default {
 
 <style scoped>
 .discoverContainer {
-	font-size: 24px;
+  font-size: 24px;
 }
 .lists {
   height: 80px;
@@ -127,4 +127,3 @@ export default {
   margin-top: -10px;
 }
 </style>
-

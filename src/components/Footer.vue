@@ -39,7 +39,6 @@ export default {
   methods: {
     handleTabs: function (item, index) {
       let _this = this
-      console.log(item, index)
       switch (index) {
         case 0: // 首页
           _this.$store.commit('updateProgress', 'WeChat')
