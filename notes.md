@@ -6,6 +6,6 @@
 1. 本项目的配置，在 `config/index.js` 简单配置下路由。如下：
   `build` 下的 `assetsPublicPath: /wechat` WeChat 是 `coding` 上的项目名
 
+2. 在本项目 `yarn build`， 将 `dist`的文件 `copy` 到 `coding` 下的 `WeChat`
 
-
-2. 在本项目 `yarn build`， 将 `dist`的文件 `copy` 到 `coding` 下的 `WeChat` 
+3. 因为之前在`coding`上已经进行了`pages`的配置，将打包后的文件替换上去后，页面自动刷新，当前项目的预览地址是 [wechat](https://eyea.coding.me/wechat/)
