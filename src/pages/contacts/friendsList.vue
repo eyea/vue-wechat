@@ -11,8 +11,8 @@
         </div>
         <div class='showInfo'>
             <h3 class='title'>
-              {{item.title}}
-            </h3>
+							{{item.title}}
+						</h3>
         </div>
     </div>
 
@@ -87,4 +87,5 @@ export default {
   height: 80px;
   line-height: 80px;
 }
+
 </style>

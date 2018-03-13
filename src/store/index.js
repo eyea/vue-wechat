@@ -5,12 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    progress: 'WeChat'
+    progress: 'WeChat',
+    isMain: true  // 是否是在四个主界面
   },
 
   mutations: {
     updateProgress (state, progress) {
       state.progress = progress
+    },
+    updateIsMain (state, flag) {
+      state.isMain = flag
     }
   }
 })

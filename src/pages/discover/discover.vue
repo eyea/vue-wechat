@@ -112,7 +112,7 @@ export default {
   width: 76px;
   height: 76px;
   border-radius: 50%;
-  background-color: rgba(235, 235, 235, .1);  
+	background-color: rgba(235, 235, 235, .1);  
 }
 .showAvator .infoNum {
   display: block;
@@ -120,12 +120,10 @@ export default {
   height: 20px;
   color: #fff;
   border-radius: 50%;
-  color: rgba(255, 255, 255, 1);
-  background-color: rgba(255, 0, 0, 1);
+	color: rgba(255, 255, 255, 1);
+	background-color: rgba(255, 0, 0, 1);
   float: right;
   margin-left: -12px;
   margin-top: -10px;
 }
 </style>
-
-
