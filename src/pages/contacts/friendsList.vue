@@ -82,5 +82,6 @@ export default {
     }
   }
 }
+
 </style>
 

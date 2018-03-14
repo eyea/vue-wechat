@@ -11,6 +11,9 @@ export default new Vuex.Store({
   mutations: {
     updateProgress (state, progress) {
       state.progress = progress
+    },
+    updateIsMain (state, flag) {
+      state.isMain = flag
     }
   }
 })
