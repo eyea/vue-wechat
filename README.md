@@ -14,6 +14,9 @@ vue2 + webpack
 - yarn --version Version: 0.17.9
 - webpack -v Version: 3.10.0
 
+### 在线预览地址
+![coding_wechat](https://user-images.githubusercontent.com/17020223/37395941-7f5a7984-27b2-11e8-8d5b-d4b070fc9ee4.jpg)
+
 ### 安装依赖说明
 > todo
 
