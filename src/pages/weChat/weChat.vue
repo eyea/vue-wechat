@@ -43,7 +43,7 @@ export default {
         title: '联系人名称',
         submitInfo: '摘要信息',
         lastUpdateTime: '12:30',
-        hasMute: true,        
+        hasMute: true,
         chatType: 'groupChat'
       }]
     }

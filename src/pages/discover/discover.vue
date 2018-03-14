@@ -1,6 +1,6 @@
 <template>
-  <div class="discoverContainer">
-    <div class="main">
+  <div class='discoverContainer'>
+    <div class='main'>
       <!-- 根据不同规则来显示 -->
       <div class='lists' v-for='(item, index) in lists' :key='index' @click='handleDiscover'>
           <div class='showPic'>
@@ -20,60 +20,60 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       lists: [
         {
           discoverImgUrl:
-            "https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4",
-          title: "Monments",
+            'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
+          title: 'Monments',
           tips: {
             tipsImgUrl:
-              "https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4"
+              'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4'
           }
         },
         {
           discoverImgUrl:
-            "https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4",
-          title: "Scan QR Code"
+            'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
+          title: 'Scan QR Code'
         },
         {
           discoverImgUrl:
-            "https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4",
-          title: "Shake"
+            'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
+          title: 'Shake'
         },
         {
           discoverImgUrl:
-            "https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4",
-          title: "Top Stories"
+            'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
+          title: 'Top Stories'
         },
         {
           discoverImgUrl:
-            "https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4",
-          title: "Search"
+            'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
+          title: 'Search'
         },
         {
           discoverImgUrl:
-            "https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4",
-          title: "Games"
+            'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
+          title: 'Games'
         },
         {
           discoverImgUrl:
-            "https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4",
-          title: "Mini Programs"
+            'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
+          title: 'Mini Programs'
         }
       ]
-    };
+    }
   },
   methods: {
-    handleDiscover: function() {
-      alert("discover");
+    handleDiscover: function () {
+      alert('discover')
     }
   }
-};
+}
 </script>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
 .discoverContainer {
   .main {
     .lists {
