@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    progress: 'WeChat'
+    progress: 'FriendsList' // Wechat  FriendsList  Discover Me
   },
 
   mutations: {

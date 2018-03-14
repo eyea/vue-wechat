@@ -2,18 +2,16 @@
   <div class='contactsContainer'>
     <!-- 固定四个 -->
     
-
-
-    <!-- 分类展示 -->
-    <div class='lists' v-for='(item, index) in lists' :key='index' @click='contactSb'>
-        <div class='showPic'>
-            <img class='avator' v-bind:src='item.contactImgUrl' alt=''>
-        </div>
-        <div class='showInfo'>
-            <h3 class='title'>
-              {{item.title}}
-            </h3>
-        </div>
+    <div class="main">
+      <!-- 分类展示 -->
+      <div class='lists' v-for='(item, index) in lists' :key='index' @click='contactSb'>
+          <div class='showPic'>
+              <img class='avator' v-bind:src='item.contactImgUrl' alt=''>
+          </div>
+          <div class='showInfo'>
+              <h3 class='title'>{{item.title}}</h3>
+          </div>
+      </div>      
     </div>
 
   </div>
@@ -52,39 +50,37 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
 .contactsContainer {
-  font-size: 24px;
-}
-.lists {
-  height: 80px;
-  padding: 10px;
-  border-bottom: 1px solid gray;
-}
-.showPic {
-  width: 80px;
-  height: 90px;
-  left: 35px;
-  top: 21px;
-  float: left;
-}
-.showPic img.avator {
-  display: inline-block;
-  width: 76px;
-  height: 76px;
-  border-radius: 50%;
-  background-color: rgba(235, 235, 235, 0.1);
-}
-.showInfo {
-  width: 500px;
-  height: 80px;
-  margin-left: 20px;
-  float: left;
-  text-align: left;
-}
-.title {
-  height: 80px;
-  line-height: 80px;
+  .main {
+    .lists {
+      height: 62px;
+      line-height: 62px;
+      border-bottom: 1px solid gray;
+      position: relative;
+      box-sizing: border-box;
+      .showPic {
+        width: 42px;
+        height: 42px;
+        float: left;
+        margin-top: 6px; // TODO: 垂直居中?
+        .avator {
+          width: 42px;
+          height: 42px;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      .showInfo {
+        float: left;
+        text-align: left;
+        margin-left: 20px;
+        .title {
+          font-size: 12px;
+        }
+      }
+    }
+  }
 }
 </style>
+

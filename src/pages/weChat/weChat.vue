@@ -16,6 +16,8 @@
         </div>
         <div class="right">
           <!-- TODO: 显示时间和别的图标 -->
+          <div class="showTime">{{item.lastUpdateTime}}</div>
+          <div v-if="item.hasMute" class="hasMute">禁言</div>
         </div>
       </div>
     </div>
@@ -33,6 +35,7 @@ export default {
         title: '联系人名称',
         submitInfo: '摘要信息',
         lastUpdateTime: '12:30',
+        hasMute: false,
         chatType: 'p2p'// 聊天分类 个人、群聊、公众号
       }, {
         imgUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
@@ -40,6 +43,7 @@ export default {
         title: '联系人名称',
         submitInfo: '摘要信息',
         lastUpdateTime: '12:30',
+        hasMute: true,        
         chatType: 'groupChat'
       }]
     }
@@ -63,7 +67,7 @@ export default {
   width: 100%;
   .main {
     .lists {
-      width: 320px;
+      // width: 320px;
       height: 62px;
       border-bottom: 1px solid gray;
       position: relative;
@@ -100,6 +104,22 @@ export default {
         }
         .submitInfo {
           font-size: 10px;
+        }
+      }
+      .right {
+        float: right;
+        text-align: center;
+        margin-right: 10px;
+        .showTime {
+          font-size: 10px;
+        }
+        .hasMute {
+          width: 20px;
+          height: 10px;
+          float: right;
+          font-size: 10px;
+          color: gray;
+          text-decoration: line-through;
         }
       }
     }
