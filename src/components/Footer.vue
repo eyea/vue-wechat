@@ -65,24 +65,25 @@ export default {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 88px;
-  line-height: 88px;
+  height: 44px;
+  line-height: 44px;
 }
 .tab {
   width: 25%;
   border: 1px solid #eee;
   box-sizing: border-box;
   text-align: center;
-  height: 88px;
+  height: 44px;
 }
 .icon {
   height: 16px;
-  line-height: 48px;
-  font-size: 24px;
+  line-height: 22px;
+  font-size: 12px;
 }
 .text {
   height: 28px;
-  font-size: 24px;
+  line-height: 28px;
+  font-size: 12px;
 }
 </style>
 

@@ -46,15 +46,15 @@
 
 <style scoped>
   .header {
-    height: 88px;
-    line-height: 88px;
+    height: 44px;
+    line-height: 44px;
     color: #fff;
     background: #000;
-    font-size: 28px;
+    font-size: 12px;
   }
   .microIcon {
-    width: 88px;
-    height: 88px;
+    width: 44px;
+    height: 44px;
   }
   .fl {
     float: left;
@@ -63,8 +63,8 @@
     float: right;
   }
   .title {
-    height: 88px;
-    line-height: 88px;
+    height: 44px;
+    line-height: 44px;
     max-width: 50vh;
     overflow: hidden;
     text-overflow:ellipsis;

@@ -1,7 +1,7 @@
 <template>
   <div id='app'>
 
-    <div class="main">
+    <div class="appMain">
       <Header v-if='isMain'></Header>
 
       <WeChat v-if='progress === "WeChat"'></WeChat>
@@ -47,6 +47,9 @@
       Discover,
       Me,
       P2PDialog
+    },
+    mounted () {
+      console.log('current progress: ', this.progress)
     }
   }
 </script>

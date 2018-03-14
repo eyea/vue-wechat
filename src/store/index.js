@@ -5,8 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    progress: 'WeChat',
-    isMain: true  // 是否是在四个主界面
+    progress: 'WeChat', // WeChat  FriendsList  Discover Me
+    isMain: true // isMain 是否是主界面
   },
 
   mutations: {
