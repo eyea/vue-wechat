@@ -29,3 +29,6 @@ vue2 + webpack
 - [ ] 我
 - [ ] 顶部功能
 
+### License
+[MIT](https://opensource.org/licenses/MIT)
+Copyright (c) 2018-present, eyeseau(eyea)
