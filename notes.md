@@ -10,6 +10,17 @@
 
 3. 因为之前在`coding`上已经进行了`pages`的配置，将打包后的文件替换上去后，页面自动刷新，当前项目的预览地址是 [wechat](https://eyea.coding.me/wechat/)
 
-### some others
+4. 使用 __websocket__ 对话机制
+
+5. 使用 __vuex__ 进行状态管理
+
+6. 使用 __mongodb__ 进行数据库相关的操作
+```js
+brew install mongodb
+```
+查看mongod： 打开finder 按下 shift + command + g ,输入 /usr/local/Cellar/ Cellar下可以看到mongodb的执行文件
+从终端进入 cd /usr/local/Cellar/mongodb/3.2.11/bin/
+然后执行 ./mongod --dbpath /Users/yourusername/me/mongodbData/   ／／配置数据库存放的位置
+### some other
 按照设计稿是 `640 * n`
 适配方案:采用rem单位,安装`px2rem-loader`,在`build/utils.js`下添加 `cssLoader: px2remLoader`,并配置。具体可参本项目的文件。
