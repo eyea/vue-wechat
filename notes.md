@@ -21,6 +21,20 @@ brew install mongodb
 查看mongod： 打开finder 按下 shift + command + g ,输入 /usr/local/Cellar/ Cellar下可以看到mongodb的执行文件
 从终端进入 cd /usr/local/Cellar/mongodb/3.2.11/bin/
 然后执行 ./mongod --dbpath /Users/yourusername/me/mongodbData/   ／／配置数据库存放的位置
+最后一行是mongodb的默认端口号27017 ，则说明启动成功
+http://localhost:27017/  显示 It looks like you are trying to access MongoDB over HTTP on the native driver port.
+
+这时候，再从终端进入到mongodb的bin目录下，./mongo 操作数据库
+show dbs //查看所有数据库
+use helloWorld  //新建数据库helloWorld
+db.helloWorld.find() //查看数据库helloWorld下所有表
+db.createCollection('item') //在helloWorld新建表item
+db.item.save({name:"wuqian",content:"this is first data"}) //向表item 中插入一条数据
+db.item.find()//查看表item中数据
+db.item.remove({name:"wuqian"})//删除表中 name=wuqian的数据
+db.item.drop()//删除表item
+db.dropDatabase()//删除数据库
+
 ### some other
 按照设计稿是 `640 * n`
 适配方案:采用rem单位,安装`px2rem-loader`,在`build/utils.js`下添加 `cssLoader: px2remLoader`,并配置。具体可参本项目的文件。
