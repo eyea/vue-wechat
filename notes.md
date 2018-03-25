@@ -35,6 +35,8 @@ db.item.remove({name:"wuqian"})//删除表中 name=wuqian的数据
 db.item.drop()//删除表item
 db.dropDatabase()//删除数据库
 
+tips: npm i ws --save and npm install --save bufferutil utf-8-validate
+
 ### some other
 按照设计稿是 `640 * n`
 适配方案:采用rem单位,安装`px2rem-loader`,在`build/utils.js`下添加 `cssLoader: px2remLoader`,并配置。具体可参本项目的文件。

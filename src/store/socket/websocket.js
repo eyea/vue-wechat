@@ -1,6 +1,7 @@
-import { wsUri } from './websocket_config'
+// import { wsUri } from './websocket_config'
 
-const socket = new WebSocket(wsUri)
+// const socket = new WebSocket(wsUri)
+import { socket } from '../../server'
 
 const socketOnOpen = () => {
   console.log('CONNECTED')
