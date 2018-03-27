@@ -4,7 +4,7 @@
       <div class='lists' v-for='(item, index) in lists' :key='index' @click="openChat(item)">
         <div class='showAvator'>
           <img class='avator' v-bind:src='item.imgUrl' alt=''>
-          <span class='infoNum'>{{item.infoCount}}</span> <!--注意大于99的情况-->
+          <span :class='{infoNum: item.infoCount > 0}'>{{item.infoCount > 0 ? (item.infoCount < 100 ? item.infoCount : '...') : ''}}</span> <!--注意大于99的情况-->
         </div>
         <div class='showSubmits'>
           <h3 class='title'>
@@ -16,20 +16,22 @@
         </div>
         <div class="right">
           <!-- TODO: 显示时间和别的图标 -->
-          <div class="showTime">{{item.lastUpdateTime}}</div>
+          <div class="showTime">{{handleShowTime(item.lastUpdateTime)}}</div>
           <div v-if="item.hasMute" class="hasMute">禁言</div>
         </div>
       </div>
     </div>
+    <button @click="addData">点击向本地数据库添加默认数据</button>
   </div>
 
 </template>
 
 <script>
+import moment from 'moment'
 export default {
   data () {
     return {
-      lists: [{
+      lists1: [{
         imgUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
         infoCount: 9,
         title: '联系人名称',
@@ -45,15 +47,19 @@ export default {
         lastUpdateTime: '12:30',
         hasMute: true,
         chatType: 'groupChat'
-      }]
+      }],
+      lists: null
     }
   },
   methods: {
+    handleShowTime: function (time) {
+      return  moment(time).format('L')
+    },
     renderWeChatList: function() {
       // 请求数据库
       this.$http.get('/api/weChat')
         .then(res=>{
-          console.log('res', res)
+          this.lists = res.data
         })
     },
     openChat: function (item) {
@@ -64,7 +70,24 @@ export default {
         this.$store.commit('updateIsMain', false)
         this.$store.commit('updateProgress', 'P2PDialog')
       }
-    }
+    },
+    addData: function () {
+      let json = {
+        imgUrl: 'https://avatars3.githubusercontent.com/u/17020223?s=200&u=a4eeebc47fe103d73123f8f44e97937580c6a4e3&v=4',
+        infoCount: parseInt(100 * Math.random()), // 0-100之前的随机整数
+        title: '联系人名称',
+        submitInfo: '摘要信息',
+        hasMute: parseInt(10 * Math.random()) > 4 ? true :  false, // 随机静音
+        chatType: parseInt(10 * Math.random()) > 4 ? 'p2p' :  'groupChat' // 先随机typr类型
+      }
+      this.$http.post('api/weChat', json)
+      .then(res => {
+        this.renderWeChatList()
+      })
+      .catch(err => {
+        console.log('添加数据失败', err)
+      })
+     }
   },
   mounted() {
     this.renderWeChatList()
@@ -124,7 +147,7 @@ export default {
           font-size: 10px;
         }
         .hasMute {
-          width: 20px;
+          // width: 20px;
           height: 10px;
           float: right;
           font-size: 10px;

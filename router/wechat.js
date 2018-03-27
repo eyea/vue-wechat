@@ -2,18 +2,19 @@ const express = require('express')
 const router = express.Router()
 const weChat = require('../models/wechat')
 
-// 查询所有电影
+// 查询WeChat所有list
 router.get('/weChat', (req, res) => {
   weChat.find({})
-       .sort({ update_at : -1})
+      //  .sort({ update_at : -1})
        .then(weChats => {
+         console.log('weChats', weChats)
          res.json(weChats)
        })
        .catch(err => {
          res.json(err)
        })
 })
-// 通过ObjectId查询单个电影
+// 通过ObjectId查询单个list
 router.get('/weChat/:id', (req, res) => {
   weChat.findById(req.params.id)
     .then(weChat => {
@@ -23,7 +24,7 @@ router.get('/weChat/:id', (req, res) => {
       res.json(err)
     })
 })
-// 添加一部电影
+// 添加一条list
 router.post('/weChat', (req, res) => {
   //使用weChat model上的create方法储存数据
   weChat.create(req.body, (err, weChat) => {
@@ -48,7 +49,7 @@ router.post('/weChat', (req, res) => {
   //   }
   // })
 })
-//更新一部电影
+//更新一条数据
 router.put('/weChat/:id',(req,res) => {
   weChat.findOneAndUpdate({ _id : req.params.id}
        ,{ $set : { title: req.body.title,
@@ -61,7 +62,7 @@ router.put('/weChat/:id',(req,res) => {
        .then(weChat => res.json(weChat))
        .catch(err => res.json(err))
 })
-//删除一部电影
+//删除一条数据
 router.delete('/weChat/:id',(req,res) => {
   weChat.findOneAndRemove({
         _id : req.params.id

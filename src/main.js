@@ -47,7 +47,7 @@ Vue.filter('castsToString',(casts) => {
 /* eslint-disable no-new */
 new Vue({
   created(){
-    toastr.success('启动成功!')
+    // toastr.success('启动成功!')
   },
   router,
   store,

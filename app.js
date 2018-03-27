@@ -8,7 +8,13 @@ const index = require('./router/index')
 // const movie = require('./router/movie')
 const weChat = require('./router/weChat')
 
-mongoose.connect(config.mongodb)
+mongoose.connect(config.mongodb, (err)=>{
+  if (err) {
+    console.log('数据库链接失败')
+  } else {
+    console.log('数据库链接成功！')
+  }
+})
 mongoose.Promise = global.Promise
 
 const app = express()
