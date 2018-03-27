@@ -49,6 +49,13 @@ export default {
     }
   },
   methods: {
+    renderWeChatList: function() {
+      // 请求数据库
+      this.$http.get('/api/weChat')
+        .then(res=>{
+          console.log('res', res)
+        })
+    },
     openChat: function (item) {
       // 从聊天列表点击进入聊天界面
       console.log(item)
@@ -58,6 +65,9 @@ export default {
         this.$store.commit('updateProgress', 'P2PDialog')
       }
     }
+  },
+  mounted() {
+    this.renderWeChatList()
   }
 }
 </script>

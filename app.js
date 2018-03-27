@@ -5,7 +5,8 @@ const favicon = require('serve-favicon')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const index = require('./router/index')
-const movie = require('./router/movie')
+// const movie = require('./router/movie')
+const weChat = require('./router/weChat')
 
 mongoose.connect(config.mongodb)
 mongoose.Promise = global.Promise
@@ -18,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(favicon(__dirname + '/src/assets/favicon.ico'))
 app.use(express.static('dist'))
 app.use('/',index)
-app.use('/api',movie)
+app.use('/api',weChat)
 
 app.listen(port, () => {
   console.log(`${pkg.name} listening on port: ${port}`)
