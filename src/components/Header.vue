@@ -19,11 +19,11 @@
     <span class="fr microIcon iconAddLists" v-show="showIconAddLists">
       L
     </span>
- 
+
     <!-- 显示搜索 -->
     <span class="fr microIcon iconSearch" v-show="showIconSearch">
       S
-    </span>  
+    </span>
 
     <!-- 显示别的功能的图标 -->
   </div>

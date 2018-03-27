@@ -11,15 +11,18 @@
       <Discover v-if='progress === "Discover"'></Discover>
 
       <Me v-if='progress === "Me"'></Me>
-      
+
       <Footer v-if='isMain'></Footer>
     </div>
 
     <!-- 个性化界面 -->
         <!-- 聊天界面 -->
-    <P2PDialog v-if='progress === "P2PDialog"'></P2PDialog>    
+    <P2PDialog v-if='progress === "P2PDialog"'></P2PDialog>
 
-    
+    <!--     <router-view></router-view>  -->
+    <router-view></router-view>
+
+
   </div>
 </template>
 
