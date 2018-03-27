@@ -5,6 +5,7 @@ import MuseUI from 'muse-ui'
 import Vodal from 'vodal'
 import axios from 'axios'
 import router from './router'
+import store from './store/index'
 import 'toastr/build/toastr.min.css'
 import 'muse-ui/dist/muse-ui.css'
 import './assets/icon.css'
@@ -49,5 +50,6 @@ new Vue({
     toastr.success('启动成功!')
   },
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')
