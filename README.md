@@ -15,7 +15,7 @@ vue2 + webpack
 - webpack -v Version: 3.10.0
 
 ### 在线预览地址
-受限于托管网站限制和当前个人域名想换个，下面二维码暂时只在浏览器里打开，微信无法直接打开
+受限于托管网站限制和当前个人域名暂时没有找到合适的，下面二维码暂时只在浏览器里打开，微信无法直接打开
 ![coding_wechat](https://user-images.githubusercontent.com/17020223/37395941-7f5a7984-27b2-11e8-8d5b-d4b070fc9ee4.jpg)
 
 ### 安装依赖说明
@@ -28,8 +28,8 @@ vue2 + webpack
 - [ ] 发现
 - [ ] 我
 - [ ] 顶部功能
-- [ ] 本地数据库
-- [ ] 本地服务
+- [x] 本地数据库
+- [x] 本地服务
 
 ### License
 [MIT](https://opensource.org/licenses/MIT)

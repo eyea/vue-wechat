@@ -43,7 +43,7 @@ tips: npm i ws --save and npm install --save bufferutil utf-8-validate  ===> can
 使用express搭建服务，使用mongoose作为数据库
 
 ```html
-1. cd /usr/local/Cellar/mongodb/3.2.11/bin  &&  ./mongod --dbpath /Users/wangxudong/me/mongodbData
+1. cd /usr/local/Cellar/mongodb/3.2.11/bin  &&  ./mongod --dbpath /Users/yourusername/me/mongodbData
 2. cd /usr/local/Cellar/mongodb/3.2.11/bin  &&  ./mongo
 3. 进入项目下 nodemon app.js
 4. 进入项目下 npm run dev
